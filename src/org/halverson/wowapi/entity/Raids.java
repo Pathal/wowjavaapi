@@ -19,6 +19,8 @@ package org.halverson.wowapi.entity;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlElement;
+
 /**
  * Representation of a raid including the number of normal and heroic completions and a list of bosses.
  *
@@ -37,7 +39,7 @@ public class Raids implements Serializable {
     public String getName() {
         return name;
     }
-
+    @XmlElement
     public void setName(String name) {
         this.name = name;
     }
@@ -45,7 +47,7 @@ public class Raids implements Serializable {
     public int getNormal() {
         return normal;
     }
-
+    @XmlElement
     public void setNormal(int normal) {
         this.normal = normal;
     }
@@ -53,7 +55,7 @@ public class Raids implements Serializable {
     public int getHeroic() {
         return heroic;
     }
-
+    @XmlElement
     public void setHeroic(int heroic) {
         this.heroic = heroic;
     }
@@ -61,7 +63,7 @@ public class Raids implements Serializable {
     public int getId() {
         return id;
     }
-
+    @XmlElement
     public void setId(int id) {
         this.id = id;
     }
@@ -69,7 +71,7 @@ public class Raids implements Serializable {
     public List<Bosses> getBosses() {
         return bosses;
     }
-
+    @XmlElement
     public void setBosses(List<Bosses> bosses) {
         this.bosses = bosses;
     }

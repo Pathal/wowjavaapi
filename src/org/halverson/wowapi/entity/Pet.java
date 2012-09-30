@@ -16,6 +16,8 @@
 
 package org.halverson.wowapi.entity;
 
+import javax.xml.bind.annotation.XmlElement;
+
 public class Pet {
     private int creature;
     private String name;
@@ -37,7 +39,7 @@ public class Pet {
     public int getCreature() {
         return creature;
     }
-
+    @XmlElement
     public void setCreature(int creature) {
         this.creature = creature;
     }
@@ -45,7 +47,7 @@ public class Pet {
     public String getName() {
         return name;
     }
-
+    @XmlElement
     public void setName(String name) {
         this.name = name;
     }
@@ -53,7 +55,7 @@ public class Pet {
     public boolean isSelected() {
         return selected;
     }
-
+    @XmlElement
     public void setSelected(boolean selected) {
         this.selected = selected;
     }
@@ -61,7 +63,7 @@ public class Pet {
     public int getSlot() {
         return slot;
     }
-
+    @XmlElement
     public void setSlot(int slot) {
         this.slot = slot;
     }

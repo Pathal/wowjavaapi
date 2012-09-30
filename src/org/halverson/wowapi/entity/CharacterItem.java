@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2011 Chris D. Halverson <cdh@halverson.org>
+ * Updated by Pathal of EJ.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,6 +17,9 @@
 
 package org.halverson.wowapi.entity;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 /**
  * Class representing a character's items.
  */
@@ -29,7 +33,7 @@ public class CharacterItem {
     public int getId() {
         return id;
     }
-
+    @XmlElement
     public void setId(int id) {
         this.id = id;
     }
@@ -37,7 +41,7 @@ public class CharacterItem {
     public String getIcon() {
         return icon;
     }
-
+    @XmlElement
     public void setIcon(String icon) {
         this.icon = icon;
     }
@@ -45,7 +49,7 @@ public class CharacterItem {
     public String getName() {
         return name;
     }
-
+    @XmlElement
     public void setName(String name) {
         this.name = name;
     }
@@ -53,7 +57,7 @@ public class CharacterItem {
     public int getQuality() {
         return quality;
     }
-
+    @XmlElement
     public void setQuality(int quality) {
         this.quality = quality;
     }
@@ -61,7 +65,7 @@ public class CharacterItem {
     public TooltipParams getTooltipParams() {
         return tooltipParams;
     }
-
+    @XmlElement
     public void setTooltipParams(TooltipParams tooltipParams) {
         this.tooltipParams = tooltipParams;
     }

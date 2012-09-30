@@ -16,6 +16,9 @@
 
 package org.halverson.wowapi.entity;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -36,7 +39,7 @@ public class GuildCharacter implements Comparable<GuildCharacter> {
     public String getName() {
         return name;
     }
-
+    @XmlElement
     public void setName(String name) {
         this.name = name;
     }
@@ -44,7 +47,7 @@ public class GuildCharacter implements Comparable<GuildCharacter> {
     public String getRealm() {
         return realm;
     }
-
+    @XmlElement
     public void setRealm(String realm) {
         this.realm = realm;
     }
@@ -52,7 +55,7 @@ public class GuildCharacter implements Comparable<GuildCharacter> {
     public int getCharacterClass() {
         return characterClass;
     }
-
+    @XmlElement
     public void setCharacterClass(int characterClass) {
         this.characterClass = characterClass;
     }
@@ -60,7 +63,7 @@ public class GuildCharacter implements Comparable<GuildCharacter> {
     public int getRace() {
         return race;
     }
-
+    @XmlElement
     public void setRace(int race) {
         this.race = race;
     }
@@ -68,7 +71,7 @@ public class GuildCharacter implements Comparable<GuildCharacter> {
     public String getGender() {
         return gender;
     }
-
+    @XmlElement
     public void setGender(String gender) {
         this.gender = gender;
     }
@@ -76,7 +79,7 @@ public class GuildCharacter implements Comparable<GuildCharacter> {
     public int getLevel() {
         return level;
     }
-
+    @XmlElement
     public void setLevel(int level) {
         this.level = level;
     }
@@ -84,7 +87,7 @@ public class GuildCharacter implements Comparable<GuildCharacter> {
     public int getAchievementPoints() {
         return achievementPoints;
     }
-
+    @XmlElement
     public void setAchievementPoints(int achievementPoints) {
         this.achievementPoints = achievementPoints;
     }
@@ -92,7 +95,7 @@ public class GuildCharacter implements Comparable<GuildCharacter> {
     public String getThumbnail() {
         return thumbnail;
     }
-
+    @XmlElement
     public void setThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
     }

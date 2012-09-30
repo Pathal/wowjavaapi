@@ -16,6 +16,9 @@
 
 package org.halverson.wowapi.entity;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Arrays;
 
 /**
@@ -33,7 +36,7 @@ public class GuildAchievements {
     public Integer[] getAchievementsCompleted() {
         return achievementsCompleted;
     }
-
+    @XmlElement
     public void setAchievementsCompleted(Integer[] achievementsCompleted) {
         this.achievementsCompleted = achievementsCompleted;
     }
@@ -41,7 +44,7 @@ public class GuildAchievements {
     public Long[] getAchievementsCompletedTimestamp() {
         return achievementsCompletedTimestamp;
     }
-
+    @XmlElement
     public void setAchievementsCompletedTimestamp(Long[] achievementsCompletedTimestamp) {
         this.achievementsCompletedTimestamp = achievementsCompletedTimestamp;
     }
@@ -49,7 +52,7 @@ public class GuildAchievements {
     public Integer[] getCriteria() {
         return criteria;
     }
-
+    @XmlElement
     public void setCriteria(Integer[] criteria) {
         this.criteria = criteria;
     }
@@ -57,7 +60,7 @@ public class GuildAchievements {
     public Integer[] getCriteriaQuantity() {
         return criteriaQuantity;
     }
-
+    @XmlElement
     public void setCriteriaQuantity(Integer[] criteriaQuantity) {
         this.criteriaQuantity = criteriaQuantity;
     }
@@ -65,7 +68,7 @@ public class GuildAchievements {
     public Long[] getCriteriaTimestamp() {
         return criteriaTimestamp;
     }
-
+    @XmlElement
     public void setCriteriaTimestamp(Long[] criteriaTimestamp) {
         this.criteriaTimestamp = criteriaTimestamp;
     }
@@ -73,7 +76,7 @@ public class GuildAchievements {
     public Long[] getCriteriaCreated() {
         return criteriaCreated;
     }
-
+    @XmlElement
     public void setCriteriaCreated(Long[] criteriaCreated) {
         this.criteriaCreated = criteriaCreated;
     }

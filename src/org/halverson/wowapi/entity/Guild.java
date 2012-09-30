@@ -16,6 +16,9 @@
 
 package org.halverson.wowapi.entity;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 public class Guild {
@@ -31,7 +34,7 @@ public class Guild {
     public String getName() {
         return name;
     }
-
+    @XmlElement
     public void setName(String name) {
         this.name = name;
     }
@@ -39,7 +42,7 @@ public class Guild {
     public String getRealm() {
         return realm;
     }
-
+    @XmlElement
     public void setRealm(String realm) {
         this.realm = realm;
     }
@@ -47,7 +50,7 @@ public class Guild {
     public int getSide() {
         return side;
     }
-
+    @XmlElement
     public void setSide(int side) {
         this.side = side;
     }
@@ -55,7 +58,7 @@ public class Guild {
     public int getLevel() {
         return level;
     }
-
+    @XmlElement
     public void setLevel(int level) {
         this.level = level;
     }
@@ -63,7 +66,7 @@ public class Guild {
     public int getAchievementPoints() {
         return achievementPoints;
     }
-
+    @XmlElement
     public void setAchievementPoints(int achievementPoints) {
         this.achievementPoints = achievementPoints;
     }
@@ -71,7 +74,7 @@ public class Guild {
     public long getLastModified() {
         return lastModified;
     }
-
+    @XmlElement
     public void setLastModified(long lastModified) {
         this.lastModified = lastModified;
     }
@@ -79,7 +82,7 @@ public class Guild {
     public List<GuildMember> getMembers() {
         return members;
     }
-
+    @XmlElement
     public void setMembers(List<GuildMember> members) {
         this.members = members;
     }
@@ -87,7 +90,7 @@ public class Guild {
     public GuildAchievements getAchievements() {
         return achievements;
     }
-
+    @XmlElement
     public void setAchievements(GuildAchievements achievements) {
         this.achievements = achievements;
     }

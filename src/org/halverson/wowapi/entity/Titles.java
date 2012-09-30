@@ -18,6 +18,8 @@ package org.halverson.wowapi.entity;
 
 import java.io.Serializable;
 
+import javax.xml.bind.annotation.XmlElement;
+
 @SuppressWarnings({"UnusedDeclaration"})
 public class Titles implements Serializable, Comparable<Titles> {
     private int id;
@@ -27,7 +29,7 @@ public class Titles implements Serializable, Comparable<Titles> {
     public boolean isSelected() {
         return selected;
     }
-
+    @XmlElement
     public void setSelected(boolean selected) {
         this.selected = selected;
     }
@@ -46,7 +48,7 @@ public class Titles implements Serializable, Comparable<Titles> {
     public int getId() {
         return id;
     }
-
+    @XmlElement
     public void setId(int id) {
         this.id = id;
     }
@@ -54,7 +56,7 @@ public class Titles implements Serializable, Comparable<Titles> {
     public String getName() {
         return name;
     }
-
+    @XmlElement
     public void setName(String name) {
         this.name = name;
     }

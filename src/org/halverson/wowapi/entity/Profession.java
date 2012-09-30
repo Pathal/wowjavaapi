@@ -16,6 +16,8 @@
 
 package org.halverson.wowapi.entity;
 
+import javax.xml.bind.annotation.XmlElement;
+
 /**
  * Class representing a profession.
  *
@@ -31,7 +33,7 @@ public class Profession implements Comparable<Profession> {
     public int getId() {
         return id;
     }
-
+    @XmlElement
     public void setId(int id) {
         this.id = id;
     }
@@ -39,7 +41,7 @@ public class Profession implements Comparable<Profession> {
     public String getName() {
         return name;
     }
-
+    @XmlElement
     public void setName(String name) {
         this.name = name;
     }
@@ -47,7 +49,7 @@ public class Profession implements Comparable<Profession> {
     public String getIcon() {
         return icon;
     }
-
+    @XmlElement
     public void setIcon(String icon) {
         this.icon = icon;
     }
@@ -55,7 +57,7 @@ public class Profession implements Comparable<Profession> {
     public int getRank() {
         return rank;
     }
-
+    @XmlElement
     public void setRank(int rank) {
         this.rank = rank;
     }
@@ -63,7 +65,7 @@ public class Profession implements Comparable<Profession> {
     public int getMax() {
         return max;
     }
-
+    @XmlElement
     public void setMax(int max) {
         this.max = max;
     }
@@ -71,7 +73,7 @@ public class Profession implements Comparable<Profession> {
     public int[] getRecipes() {
         return recipes;
     }
-
+    @XmlElement
     public void setRecipes(int[] recipes) {
         this.recipes = recipes;
     }

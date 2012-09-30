@@ -16,6 +16,10 @@
 
 package org.halverson.wowapi.entity;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 public class GuildMember implements Comparable<GuildMember> {
     private GuildCharacter character;
     private int rank;
@@ -23,7 +27,7 @@ public class GuildMember implements Comparable<GuildMember> {
     public GuildCharacter getCharacter() {
         return character;
     }
-
+    @XmlElement
     public void setCharacter(GuildCharacter character) {
         this.character = character;
     }
@@ -31,7 +35,7 @@ public class GuildMember implements Comparable<GuildMember> {
     public int getRank() {
         return rank;
     }
-
+    @XmlElement
     public void setRank(int rank) {
         this.rank = rank;
     }

@@ -16,23 +16,27 @@
 
 package org.halverson.wowapi.entity;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Arrays;
 
 /**
  * Class to hold achievement data.
  */
+@XmlRootElement
 public class CharacterAchievements {
     private Integer[] achievementsCompleted;
     private Long[] achievementsCompletedTimestamp;
     private Integer[] criteria;
-    private Integer[] criteriaQuantity;
+    private Long[] criteriaQuantity;
     private Long[] criteriaTimestamp;
     private Long[] criteriaCreated;
 
     public Integer[] getAchievementsCompleted() {
         return achievementsCompleted;
     }
-
+    @XmlElement
     public void setAchievementsCompleted(Integer[] achievementsCompleted) {
         this.achievementsCompleted = achievementsCompleted;
     }
@@ -40,7 +44,7 @@ public class CharacterAchievements {
     public Long[] getAchievementsCompletedTimestamp() {
         return achievementsCompletedTimestamp;
     }
-
+    @XmlElement
     public void setAchievementsCompletedTimestamp(Long[] achievementsCompletedTimestamp) {
         this.achievementsCompletedTimestamp = achievementsCompletedTimestamp;
     }
@@ -48,23 +52,23 @@ public class CharacterAchievements {
     public Integer[] getCriteria() {
         return criteria;
     }
-
+    @XmlElement
     public void setCriteria(Integer[] criteria) {
         this.criteria = criteria;
     }
 
-    public Integer[] getCriteriaQuantity() {
+    public Long[] getCriteriaQuantity() {
         return criteriaQuantity;
     }
-
-    public void setCriteriaQuantity(Integer[] criteriaQuantity) {
+    @XmlElement
+    public void setCriteriaQuantity(Long[] criteriaQuantity) {
         this.criteriaQuantity = criteriaQuantity;
     }
 
     public Long[] getCriteriaTimestamp() {
         return criteriaTimestamp;
     }
-
+    @XmlElement
     public void setCriteriaTimestamp(Long[] criteriaTimestamp) {
         this.criteriaTimestamp = criteriaTimestamp;
     }
@@ -72,7 +76,7 @@ public class CharacterAchievements {
     public Long[] getCriteriaCreated() {
         return criteriaCreated;
     }
-
+    @XmlElement
     public void setCriteriaCreated(Long[] criteriaCreated) {
         this.criteriaCreated = criteriaCreated;
     }

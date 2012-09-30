@@ -56,6 +56,7 @@ public class BlizzardApiConnection {
             ret = sb.toString();
         } catch (IOException e1) {
             // Some sort of connection error, let's just return some sort of error
+        	e1.printStackTrace();
             ret = "{\"status\":\"nok\", \"reason\":\"URL Connection Error\"}";
         }
         finally {

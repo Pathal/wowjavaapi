@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2011 Chris D. Halverson <cdh@halverson.org>
+ * Updated by Pathal of EJ.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,6 +20,8 @@ package org.halverson.wowapi.entity;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlElement;
+
 public class TooltipParams implements Serializable {
     private int gem0;
     private int gem1;
@@ -33,7 +36,7 @@ public class TooltipParams implements Serializable {
     public int getGem0() {
         return gem0;
     }
-
+    @XmlElement
     public void setGem0(int gem0) {
         this.gem0 = gem0;
     }
@@ -41,7 +44,7 @@ public class TooltipParams implements Serializable {
     public int getGem1() {
         return gem1;
     }
-
+    @XmlElement
     public void setGem1(int gem1) {
         this.gem1 = gem1;
     }
@@ -49,7 +52,7 @@ public class TooltipParams implements Serializable {
     public int getGem2() {
         return gem2;
     }
-
+    @XmlElement
     public void setGem2(int gem2) {
         this.gem2 = gem2;
     }
@@ -57,7 +60,7 @@ public class TooltipParams implements Serializable {
     public int getEnchant() {
         return enchant;
     }
-
+    @XmlElement
     public void setEnchant(int enchant) {
         this.enchant = enchant;
     }
@@ -65,7 +68,7 @@ public class TooltipParams implements Serializable {
     public int getReforge() {
         return reforge;
     }
-
+    @XmlElement
     public void setReforge(int reforge) {
         this.reforge = reforge;
     }
@@ -73,7 +76,7 @@ public class TooltipParams implements Serializable {
     public List<Integer> getSet() {
         return set;
     }
-
+    @XmlElement
     public void setSet(List<Integer> set) {
         this.set = set;
     }
@@ -81,7 +84,7 @@ public class TooltipParams implements Serializable {
     public long getSeed() {
         return seed;
     }
-
+    @XmlElement
     public void setSeed(long seed) {
         this.seed = seed;
     }
@@ -89,7 +92,7 @@ public class TooltipParams implements Serializable {
     public boolean isExtraSocket() {
         return extraSocket;
     }
-
+    @XmlElement
     public void setExtraSocket(boolean extraSocket) {
         this.extraSocket = extraSocket;
     }
@@ -97,7 +100,7 @@ public class TooltipParams implements Serializable {
     public int getSuffix() {
         return suffix;
     }
-
+    @XmlElement
     public void setSuffix(int suffix) {
         this.suffix = suffix;
     }

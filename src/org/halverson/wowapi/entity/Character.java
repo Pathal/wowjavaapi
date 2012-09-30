@@ -15,7 +15,9 @@
  */
 
 package org.halverson.wowapi.entity;
-
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -28,6 +30,7 @@ import java.util.List;
  * may be filled in.
  *
  */
+@XmlRootElement
 @SuppressWarnings({"UnusedDeclaration"})
 public class Character implements Comparable<Character> {
     private String name;
@@ -35,6 +38,11 @@ public class Character implements Comparable<Character> {
     private String realm;
     private long lastModified;
     private String thumbnail;
+    private String RenderID;
+    private String[] tmpStr;
+    public final String bigImage = "profilemain.jpg";
+    public final String midImage = "card.jpg";
+    public final String smallImage = "avatar.jpg";
 
     @SerializedName("race")
     private int raceId;
@@ -62,7 +70,7 @@ public class Character implements Comparable<Character> {
     public CharacterEquipment getItems() {
         return items;
     }
-
+    @XmlElement
     public void setItems(CharacterEquipment items) {
         this.items = items;
     }
@@ -70,7 +78,7 @@ public class Character implements Comparable<Character> {
     public CharacterStats getStats() {
         return stats;
     }
-
+    @XmlElement
     public void setStats(CharacterStats stats) {
         this.stats = stats;
     }
@@ -78,7 +86,7 @@ public class Character implements Comparable<Character> {
     public List<Talents> getTalents() {
         return talents;
     }
-
+    @XmlElement
     public void setTalents(List<Talents> talents) {
         this.talents = talents;
     }
@@ -86,7 +94,7 @@ public class Character implements Comparable<Character> {
     public Progression getProgression() {
         return progression;
     }
-
+    @XmlElement
     public void setProgression(Progression progression) {
         this.progression = progression;
     }
@@ -94,7 +102,7 @@ public class Character implements Comparable<Character> {
     public Professions getProfessions() {
         return professions;
     }
-
+    @XmlElement
     public void setProfessions(Professions professions) {
         this.professions = professions;
     }
@@ -102,7 +110,7 @@ public class Character implements Comparable<Character> {
     public List<Pet> getPets() {
         return pets;
     }
-
+    @XmlElement
     public void setPets(List<Pet> pets) {
         this.pets = pets;
     }
@@ -110,7 +118,7 @@ public class Character implements Comparable<Character> {
     public CharacterAchievements getAchievements() {
         return achievements;
     }
-
+    @XmlElement
     public void setAchievements(CharacterAchievements achievements) {
         this.achievements = achievements;
     }
@@ -118,7 +126,7 @@ public class Character implements Comparable<Character> {
     public Integer[] getCompanions() {
         return companions;
     }
-
+    @XmlElement
     public void setCompanions(Integer[] companions) {
         this.companions = companions;
     }
@@ -126,7 +134,7 @@ public class Character implements Comparable<Character> {
     public List<Titles> getTitles() {
         return titles;
     }
-
+    @XmlElement
     public void setTitles(List<Titles> titles) {
         this.titles = titles;
     }
@@ -146,7 +154,7 @@ public class Character implements Comparable<Character> {
     public String getName() {
         return name;
     }
-
+    @XmlElement
     public void setName(String name) {
         this.name = name;
     }
@@ -154,7 +162,7 @@ public class Character implements Comparable<Character> {
     public int getLevel() {
         return level;
     }
-
+    @XmlElement
     public void setLevel(int level) {
         this.level = level;
     }
@@ -162,7 +170,7 @@ public class Character implements Comparable<Character> {
     public String getRealm() {
         return realm;
     }
-
+    @XmlElement
     public void setRealm(String realm) {
         this.realm = realm;
     }
@@ -170,23 +178,32 @@ public class Character implements Comparable<Character> {
     public long getLastModified() {
         return lastModified;
     }
-
+    @XmlElement
     public void setLastModified(long lastModified) {
         this.lastModified = lastModified;
     }
 
+    public String getRenderID(){
+    	return RenderID;
+    }
+    @XmlElement
+    public void setRenderID(String r){
+    	this.RenderID = r;
+    }
     public String getThumbnail() {
         return thumbnail;
     }
-
+    @XmlElement
     public void setThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
+        tmpStr = thumbnail.split("-");
+        setRenderID(tmpStr[0].concat("-"));
     }
 
     public int getRaceId() {
         return raceId;
     }
-
+    @XmlElement
     public void setRaceId(int raceId) {
         this.raceId = raceId;
     }
@@ -198,7 +215,7 @@ public class Character implements Comparable<Character> {
     public int getAchievementPoints() {
         return achievementPoints;
     }
-
+    @XmlElement
     public void setAchievementPoints(int achievementPoints) {
         this.achievementPoints = achievementPoints;
     }
@@ -210,7 +227,7 @@ public class Character implements Comparable<Character> {
     public Gender getGender() {
         return Gender.get(genderId);
     }
-
+    @XmlElement
     public void setGenderId(int genderId) {
         this.genderId = genderId;
     }
@@ -218,7 +235,7 @@ public class Character implements Comparable<Character> {
     public int getClassId() {
         return classId;
     }
-
+    @XmlElement
     public void setClassId(int classId) {
         this.classId = classId;
 

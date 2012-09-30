@@ -19,6 +19,8 @@ package org.halverson.wowapi.entity;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlElement;
+
 public class Talents implements Serializable {
     private boolean selected;
     private String name;
@@ -32,7 +34,7 @@ public class Talents implements Serializable {
     public Glyphs getGlyphs() {
         return glyphs;
     }
-
+    @XmlElement
     public void setGlyphs(Glyphs glyphs) {
         this.glyphs = glyphs;
     }
@@ -40,7 +42,7 @@ public class Talents implements Serializable {
     public boolean isSelected() {
         return selected;
     }
-
+    @XmlElement
     public void setSelected(boolean selected) {
         this.selected = selected;
     }
@@ -48,7 +50,7 @@ public class Talents implements Serializable {
     public String getName() {
         return name;
     }
-
+    @XmlElement
     public void setName(String name) {
         this.name = name;
     }
@@ -56,7 +58,7 @@ public class Talents implements Serializable {
     public String getIcon() {
         return icon;
     }
-
+    @XmlElement
     public void setIcon(String icon) {
         this.icon = icon;
     }
@@ -64,7 +66,7 @@ public class Talents implements Serializable {
     public String getBuild() {
         return build;
     }
-
+    @XmlElement
     public void setBuild(String build) {
         this.build = build;
     }
@@ -72,7 +74,7 @@ public class Talents implements Serializable {
     public List<TalentTree> getTrees() {
         return trees;
     }
-
+    @XmlElement
     public void setTrees(List<TalentTree> trees) {
         this.trees = trees;
     }

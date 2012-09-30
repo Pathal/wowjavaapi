@@ -19,6 +19,8 @@ package org.halverson.wowapi.entity;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlElement;
+
 /**
  * Class representing realm status. Just contains a list of realm objects.
  *
@@ -41,6 +43,7 @@ public class RealmStatus implements Serializable {
      *
      * @param realms
      */
+    @XmlElement
     public void setRealms(List<Realm> realms) {
         this.realms = realms;
     }

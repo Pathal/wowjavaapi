@@ -18,6 +18,8 @@ package org.halverson.wowapi.entity;
 
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlElement;
+
 @SuppressWarnings({"UnusedDeclaration"})
 public class Progression {
     private List<Raids> raids;
@@ -25,7 +27,7 @@ public class Progression {
     public List<Raids> getRaids() {
         return raids;
     }
-
+    @XmlElement
     public void setRaids(List<Raids> raids) {
         this.raids = raids;
     }

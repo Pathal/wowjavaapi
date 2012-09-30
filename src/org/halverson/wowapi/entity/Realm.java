@@ -18,6 +18,8 @@ package org.halverson.wowapi.entity;
 
 import java.io.Serializable;
 
+import javax.xml.bind.annotation.XmlElement;
+
 /**
  * Representation of the Realm status JSON.
  *
@@ -33,7 +35,7 @@ public class Realm implements Serializable {
     public String getType() {
         return type;
     }
-
+    @XmlElement
     public void setType(String type) {
         this.type = type;
     }
@@ -41,7 +43,7 @@ public class Realm implements Serializable {
     public boolean isQueue() {
         return queue;
     }
-
+    @XmlElement
     public void setQueue(boolean queue) {
         this.queue = queue;
     }
@@ -49,7 +51,7 @@ public class Realm implements Serializable {
     public boolean isStatus() {
         return status;
     }
-
+    @XmlElement
     public void setStatus(boolean status) {
         this.status = status;
     }
@@ -57,7 +59,7 @@ public class Realm implements Serializable {
     public String getPopulation() {
         return population;
     }
-
+    @XmlElement
     public void setPopulation(String population) {
         this.population = population;
     }
@@ -65,7 +67,7 @@ public class Realm implements Serializable {
     public String getName() {
         return name;
     }
-
+    @XmlElement
     public void setName(String name) {
         this.name = name;
     }
@@ -73,7 +75,7 @@ public class Realm implements Serializable {
     public String getSlug() {
         return slug;
     }
-
+    @XmlElement
     public void setSlug(String slug) {
         this.slug = slug;
     }

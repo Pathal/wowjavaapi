@@ -18,6 +18,8 @@ package org.halverson.wowapi.entity;
 
 import java.io.Serializable;
 
+import javax.xml.bind.annotation.XmlElement;
+
 /**
  * Created by IntelliJ IDEA.
  * User: Chris
@@ -48,7 +50,7 @@ public class Reputation implements Serializable {
     public int getId() {
         return id;
     }
-
+    @XmlElement
     public void setId(int id) {
         this.id = id;
     }
@@ -56,7 +58,7 @@ public class Reputation implements Serializable {
     public String getName() {
         return name;
     }
-
+    @XmlElement
     public void setName(String name) {
         this.name = name;
     }
@@ -64,7 +66,7 @@ public class Reputation implements Serializable {
     public int getStanding() {
         return standing;
     }
-
+    @XmlElement
     public void setStanding(int standing) {
         this.standing = standing;
     }
@@ -72,7 +74,7 @@ public class Reputation implements Serializable {
     public int getValue() {
         return value;
     }
-
+    @XmlElement
     public void setValue(int value) {
         this.value = value;
     }
@@ -80,7 +82,7 @@ public class Reputation implements Serializable {
     public int getMax() {
         return max;
     }
-
+    @XmlElement
     public void setMax(int max) {
         this.max = max;
     }

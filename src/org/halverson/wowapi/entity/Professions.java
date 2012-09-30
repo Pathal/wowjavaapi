@@ -18,6 +18,8 @@ package org.halverson.wowapi.entity;
 
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlElement;
+
 public class Professions {
     private List<Profession> primary;
     private List<Profession> secondary;
@@ -25,7 +27,7 @@ public class Professions {
     public List<Profession> getPrimary() {
         return primary;
     }
-
+    @XmlElement
     public void setPrimary(List<Profession> primary) {
         this.primary = primary;
     }
@@ -33,7 +35,7 @@ public class Professions {
     public List<Profession> getSecondary() {
         return secondary;
     }
-
+    @XmlElement
     public void setSecondary(List<Profession> secondary) {
         this.secondary = secondary;
     }

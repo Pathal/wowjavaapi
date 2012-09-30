@@ -18,6 +18,8 @@ package org.halverson.wowapi.entity;
 
 import java.io.Serializable;
 
+import javax.xml.bind.annotation.XmlElement;
+
 public class TalentTree implements Serializable {
     private String points;
     private int total;
@@ -25,7 +27,7 @@ public class TalentTree implements Serializable {
     public String getPoints() {
         return points;
     }
-
+    @XmlElement
     public void setPoints(String points) {
         this.points = points;
     }
@@ -33,7 +35,7 @@ public class TalentTree implements Serializable {
     public int getTotal() {
         return total;
     }
-
+    @XmlElement
     public void setTotal(int total) {
         this.total = total;
     }

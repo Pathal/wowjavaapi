@@ -16,6 +16,10 @@
 
 package org.halverson.wowapi.entity;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 public class Glyph {
     private int glyph;
     private String name;
@@ -25,7 +29,7 @@ public class Glyph {
     public int getGlyph() {
         return glyph;
     }
-
+    @XmlElement
     public void setGlyph(int glyph) {
         this.glyph = glyph;
     }
@@ -33,7 +37,7 @@ public class Glyph {
     public String getName() {
         return name;
     }
-
+    @XmlElement
     public void setName(String name) {
         this.name = name;
     }
@@ -41,7 +45,7 @@ public class Glyph {
     public int getItem() {
         return item;
     }
-
+    @XmlElement
     public void setItem(int item) {
         this.item = item;
     }
@@ -49,7 +53,7 @@ public class Glyph {
     public String getIcon() {
         return icon;
     }
-
+    @XmlElement
     public void setIcon(String icon) {
         this.icon = icon;
     }

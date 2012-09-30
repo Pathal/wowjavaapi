@@ -16,6 +16,9 @@
 
 package org.halverson.wowapi.entity;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -38,16 +41,16 @@ public class CharacterStats {
     private int spirit;
     private int attackPower;
     private int rangedAttackPower;
-    private int mastery;
+    private double mastery;
     private int masteryRating;
-    private int crit;
+    private double crit;
     private int critRating;
     private int hitRating;
     private int hasteRating;
     private int expertiseRating;
     private int spellPower;
     private int spellPen;
-    private int spellCrit;
+    private double spellCrit;
     private int spellCritRating;
     private double mana5;
     private double mana5combat;
@@ -64,24 +67,25 @@ public class CharacterStats {
     private double mainHandDmgMax;
     private double mainHandSpeed;
     private double mainHandDps;
-    private int mainHandExpertise;
+    private double mainHandExpertise;
     private double offHandDmgMin;
     private double offHandDmgMax;
     private double offHandSpeed;
     private double offHandDps;
-    private int offHandExpertise;
+    private double offHandExpertise;
     private double rangedDmgMin;
     private double rangedDmgMax;
     private double rangedSpeed;
     private double rangedDps;
     private double rangedCrit;
+    private double rangedExpertise;
     private int rangedCritRating;
     private int rangedHitRating;
 
     public int getHealth() {
         return health;
     }
-
+    @XmlElement
     public void setHealth(int health) {
         this.health = health;
     }
@@ -89,7 +93,7 @@ public class CharacterStats {
     public String getPowerType() {
         return powerType;
     }
-
+    @XmlElement
     public void setPowerType(String powerType) {
         this.powerType = powerType;
     }
@@ -97,7 +101,7 @@ public class CharacterStats {
     public int getPower() {
         return power;
     }
-
+    @XmlElement
     public void setPower(int power) {
         this.power = power;
     }
@@ -105,7 +109,7 @@ public class CharacterStats {
     public int getStrength() {
         return strength;
     }
-
+    @XmlElement
     public void setStrength(int strength) {
         this.strength = strength;
     }
@@ -113,7 +117,7 @@ public class CharacterStats {
     public int getAgility() {
         return agility;
     }
-
+    @XmlElement
     public void setAgility(int agility) {
         this.agility = agility;
     }
@@ -121,7 +125,7 @@ public class CharacterStats {
     public int getStamina() {
         return stamina;
     }
-
+    @XmlElement
     public void setStamina(int stamina) {
         this.stamina = stamina;
     }
@@ -129,7 +133,7 @@ public class CharacterStats {
     public int getIntellect() {
         return intellect;
     }
-
+    @XmlElement
     public void setIntellect(int intellect) {
         this.intellect = intellect;
     }
@@ -137,7 +141,7 @@ public class CharacterStats {
     public int getSpirit() {
         return spirit;
     }
-
+    @XmlElement
     public void setSpirit(int spirit) {
         this.spirit = spirit;
     }
@@ -145,7 +149,7 @@ public class CharacterStats {
     public int getAttackPower() {
         return attackPower;
     }
-
+    @XmlElement
     public void setAttackPower(int attackPower) {
         this.attackPower = attackPower;
     }
@@ -153,39 +157,39 @@ public class CharacterStats {
     public int getRangedAttackPower() {
         return rangedAttackPower;
     }
-
+    @XmlElement
     public void setRangedAttackPower(int rangedAttackPower) {
         this.rangedAttackPower = rangedAttackPower;
     }
 
-    public int getMastery() {
+    public double getMastery() {
         return mastery;
     }
-
-    public void setMastery(int mastery) {
+    @XmlElement
+    public void setMastery(double mastery) {
         this.mastery = mastery;
     }
 
     public int getMasteryRating() {
         return masteryRating;
     }
-
+    @XmlElement
     public void setMasteryRating(int masteryRating) {
         this.masteryRating = masteryRating;
     }
 
-    public int getCrit() {
+    public double getCrit() {
         return crit;
     }
-
-    public void setCrit(int crit) {
+    @XmlElement
+    public void setCrit(double crit) {
         this.crit = crit;
     }
 
     public int getCritRating() {
         return critRating;
     }
-
+    @XmlElement
     public void setCritRating(int critRating) {
         this.critRating = critRating;
     }
@@ -193,7 +197,7 @@ public class CharacterStats {
     public int getHitRating() {
         return hitRating;
     }
-
+    @XmlElement
     public void setHitRating(int hitRating) {
         this.hitRating = hitRating;
     }
@@ -201,7 +205,7 @@ public class CharacterStats {
     public int getHasteRating() {
         return hasteRating;
     }
-
+    @XmlElement
     public void setHasteRating(int hasteRating) {
         this.hasteRating = hasteRating;
     }
@@ -209,7 +213,7 @@ public class CharacterStats {
     public int getExpertiseRating() {
         return expertiseRating;
     }
-
+    @XmlElement
     public void setExpertiseRating(int expertiseRating) {
         this.expertiseRating = expertiseRating;
     }
@@ -217,7 +221,7 @@ public class CharacterStats {
     public int getSpellPower() {
         return spellPower;
     }
-
+    @XmlElement
     public void setSpellPower(int spellPower) {
         this.spellPower = spellPower;
     }
@@ -225,23 +229,23 @@ public class CharacterStats {
     public int getSpellPen() {
         return spellPen;
     }
-
+    @XmlElement
     public void setSpellPen(int spellPen) {
         this.spellPen = spellPen;
     }
 
-    public int getSpellCrit() {
+    public double getSpellCrit() {
         return spellCrit;
     }
-
-    public void setSpellCrit(int spellCrit) {
+    @XmlElement
+    public void setSpellCrit(double spellCrit) {
         this.spellCrit = spellCrit;
     }
 
     public int getSpellCritRating() {
         return spellCritRating;
     }
-
+    @XmlElement
     public void setSpellCritRating(int spellCritRating) {
         this.spellCritRating = spellCritRating;
     }
@@ -249,7 +253,7 @@ public class CharacterStats {
     public double getMana5() {
         return mana5;
     }
-
+    @XmlElement
     public void setMana5(double mana5) {
         this.mana5 = mana5;
     }
@@ -257,7 +261,7 @@ public class CharacterStats {
     public double getMana5combat() {
         return mana5combat;
     }
-
+    @XmlElement
     public void setMana5combat(double mana5combat) {
         this.mana5combat = mana5combat;
     }
@@ -265,7 +269,7 @@ public class CharacterStats {
     public int getArmor() {
         return armor;
     }
-
+    @XmlElement
     public void setArmor(int armor) {
         this.armor = armor;
     }
@@ -273,7 +277,7 @@ public class CharacterStats {
     public double getDodge() {
         return dodge;
     }
-
+    @XmlElement
     public void setDodge(double dodge) {
         this.dodge = dodge;
     }
@@ -281,7 +285,7 @@ public class CharacterStats {
     public int getDodgeRating() {
         return dodgeRating;
     }
-
+    @XmlElement
     public void setDodgeRating(int dodgeRating) {
         this.dodgeRating = dodgeRating;
     }
@@ -289,7 +293,7 @@ public class CharacterStats {
     public double getParry() {
         return parry;
     }
-
+    @XmlElement
     public void setParry(double parry) {
         this.parry = parry;
     }
@@ -297,7 +301,7 @@ public class CharacterStats {
     public int getParryRating() {
         return parryRating;
     }
-
+    @XmlElement
     public void setParryRating(int parryRating) {
         this.parryRating = parryRating;
     }
@@ -305,7 +309,7 @@ public class CharacterStats {
     public double getBlock() {
         return block;
     }
-
+    @XmlElement
     public void setBlock(double block) {
         this.block = block;
     }
@@ -313,7 +317,7 @@ public class CharacterStats {
     public int getBlockRating() {
         return blockRating;
     }
-
+    @XmlElement
     public void setBlockRating(int blockRating) {
         this.blockRating = blockRating;
     }
@@ -321,7 +325,7 @@ public class CharacterStats {
     public int getResilience() {
         return resilience;
     }
-
+    @XmlElement
     public void setResilience(int resilience) {
         this.resilience = resilience;
     }
@@ -329,7 +333,7 @@ public class CharacterStats {
     public double getMainHandDmgMin() {
         return mainHandDmgMin;
     }
-
+    @XmlElement
     public void setMainHandDmgMin(double mainHandDmgMin) {
         this.mainHandDmgMin = mainHandDmgMin;
     }
@@ -337,7 +341,7 @@ public class CharacterStats {
     public double getMainHandDmgMax() {
         return mainHandDmgMax;
     }
-
+    @XmlElement
     public void setMainHandDmgMax(double mainHandDmgMax) {
         this.mainHandDmgMax = mainHandDmgMax;
     }
@@ -345,7 +349,7 @@ public class CharacterStats {
     public double getMainHandSpeed() {
         return mainHandSpeed;
     }
-
+    @XmlElement
     public void setMainHandSpeed(double mainHandSpeed) {
         this.mainHandSpeed = mainHandSpeed;
     }
@@ -353,15 +357,15 @@ public class CharacterStats {
     public double getMainHandDps() {
         return mainHandDps;
     }
-
+    @XmlElement
     public void setMainHandDps(double mainHandDps) {
         this.mainHandDps = mainHandDps;
     }
 
-    public int getMainHandExpertise() {
+    public double getMainHandExpertise() {
         return mainHandExpertise;
     }
-
+    @XmlElement
     public void setMainHandExpertise(int mainHandExpertise) {
         this.mainHandExpertise = mainHandExpertise;
     }
@@ -369,7 +373,7 @@ public class CharacterStats {
     public double getOffHandDmgMin() {
         return offHandDmgMin;
     }
-
+    @XmlElement
     public void setOffHandDmgMin(double offHandDmgMin) {
         this.offHandDmgMin = offHandDmgMin;
     }
@@ -377,7 +381,7 @@ public class CharacterStats {
     public double getOffHandDmgMax() {
         return offHandDmgMax;
     }
-
+    @XmlElement
     public void setOffHandDmgMax(double offHandDmgMax) {
         this.offHandDmgMax = offHandDmgMax;
     }
@@ -385,7 +389,7 @@ public class CharacterStats {
     public double getOffHandSpeed() {
         return offHandSpeed;
     }
-
+    @XmlElement
     public void setOffHandSpeed(double offHandSpeed) {
         this.offHandSpeed = offHandSpeed;
     }
@@ -393,15 +397,15 @@ public class CharacterStats {
     public double getOffHandDps() {
         return offHandDps;
     }
-
+    @XmlElement
     public void setOffHandDps(double offHandDps) {
         this.offHandDps = offHandDps;
     }
 
-    public int getOffHandExpertise() {
+    public double getOffHandExpertise() {
         return offHandExpertise;
     }
-
+    @XmlElement
     public void setOffHandExpertise(int offHandExpertise) {
         this.offHandExpertise = offHandExpertise;
     }
@@ -409,7 +413,7 @@ public class CharacterStats {
     public double getRangedDmgMin() {
         return rangedDmgMin;
     }
-
+    @XmlElement
     public void setRangedDmgMin(double rangedDmgMin) {
         this.rangedDmgMin = rangedDmgMin;
     }
@@ -417,7 +421,7 @@ public class CharacterStats {
     public double getRangedDmgMax() {
         return rangedDmgMax;
     }
-
+    @XmlElement
     public void setRangedDmgMax(double rangedDmgMax) {
         this.rangedDmgMax = rangedDmgMax;
     }
@@ -425,7 +429,7 @@ public class CharacterStats {
     public double getRangedSpeed() {
         return rangedSpeed;
     }
-
+    @XmlElement
     public void setRangedSpeed(double rangedSpeed) {
         this.rangedSpeed = rangedSpeed;
     }
@@ -433,7 +437,15 @@ public class CharacterStats {
     public double getRangedDps() {
         return rangedDps;
     }
+    @XmlElement
+    public void setRangedExpertise(double rangedExpertise) {
+        this.rangedExpertise = rangedExpertise;
+    }
 
+    public double getRangedExpertise() {
+        return rangedExpertise;
+    }
+    @XmlElement
     public void setRangedDps(double rangedDps) {
         this.rangedDps = rangedDps;
     }
@@ -441,7 +453,7 @@ public class CharacterStats {
     public double getRangedCrit() {
         return rangedCrit;
     }
-
+    @XmlElement
     public void setRangedCrit(double rangedCrit) {
         this.rangedCrit = rangedCrit;
     }
@@ -449,7 +461,7 @@ public class CharacterStats {
     public int getRangedCritRating() {
         return rangedCritRating;
     }
-
+    @XmlElement
     public void setRangedCritRating(int rangedCritRating) {
         this.rangedCritRating = rangedCritRating;
     }
@@ -457,7 +469,7 @@ public class CharacterStats {
     public int getRangedHitRating() {
         return rangedHitRating;
     }
-
+    @XmlElement
     public void setRangedHitRating(int rangedHitRating) {
         this.rangedHitRating = rangedHitRating;
     }

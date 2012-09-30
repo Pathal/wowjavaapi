@@ -19,6 +19,10 @@ package org.halverson.wowapi.entity;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 public class Glyphs {
     private List<Glyph> prime = new ArrayList<Glyph>();
     private List<Glyph> major = new ArrayList<Glyph>();
@@ -27,7 +31,7 @@ public class Glyphs {
     public List<Glyph> getPrime() {
         return prime;
     }
-
+    @XmlElement
     public void setPrime(List<Glyph> prime) {
         this.prime = prime;
     }
@@ -35,7 +39,7 @@ public class Glyphs {
     public List<Glyph> getMajor() {
         return major;
     }
-
+    @XmlElement
     public void setMajor(List<Glyph> major) {
         this.major = major;
     }
@@ -43,7 +47,7 @@ public class Glyphs {
     public List<Glyph> getMinor() {
         return minor;
     }
-
+    @XmlElement
     public void setMinor(List<Glyph> minor) {
         this.minor = minor;
     }

@@ -143,7 +143,7 @@ public class CharacterDao {
 
         URI uri = null;
         try {
-            uri = new URI("https", String.format(URL_BASE, region), String.format(CHARACTER_API_URL, realm, name), null);
+            uri = new URI("http", String.format(URL_BASE, region), String.format(CHARACTER_API_URL, realm, name), null);
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
@@ -152,12 +152,14 @@ public class CharacterDao {
         }
 
         // We control the optional parts, and there aren't any issues with needing encoding
+        //System.out.println(uri.toString() + optionalQuery(options));
         String json = BlizzardApiConnection.getStringJSONFromRequest(uri.toString() + optionalQuery(options));
         //System.out.println("JSON: " + json);
         Gson gson = new Gson();
 
         BlizzardErrorResponse errorResponse = gson.fromJson(json, BlizzardErrorResponse.class);
 
+        //System.out.println(errorResponse.getStatus()+": "+errorResponse.getReason());
         if (!errorResponse.getStatus().equals("")) {
             // Would check for specific error here
             if("Character not found.".equals(errorResponse.getReason())) {
@@ -166,7 +168,7 @@ public class CharacterDao {
                 throw new BlizzardApplicationException(errorResponse.getReason());
             }
         }
-
+        
         return gson.fromJson(json, Character.class);
     }
 
@@ -184,7 +186,5 @@ public class CharacterDao {
         StringBuilder sb = new StringBuilder("?fields=");
         sb.append(join(strings, ","));
         return sb.toString();
-
     }
-
 }

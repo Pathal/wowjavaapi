@@ -16,6 +16,9 @@
 
 package org.halverson.wowapi.entity;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 /**
  * Class representing raid bosses.
  */
@@ -28,7 +31,7 @@ public class Bosses {
     public int getId() {
         return id;
     }
-
+    @XmlElement
     public void setId(int id) {
         this.id = id;
     }
@@ -36,7 +39,7 @@ public class Bosses {
     public String getName() {
         return name;
     }
-
+    @XmlElement
     public void setName(String name) {
         this.name = name;
     }
@@ -44,7 +47,7 @@ public class Bosses {
     public int getNormalKills() {
         return normalKills;
     }
-
+    @XmlElement
     public void setNormalKills(int normalKills) {
         this.normalKills = normalKills;
     }
@@ -52,7 +55,7 @@ public class Bosses {
     public int getHeroicKills() {
         return heroicKills;
     }
-
+    @XmlElement
     public void setHeroicKills(int heroicKills) {
         this.heroicKills = heroicKills;
     }

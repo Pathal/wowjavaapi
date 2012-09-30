@@ -20,7 +20,7 @@ package org.halverson.wowapi.entity;
  * List of available regions that are available to query.
  */
 public enum Region {
-    US("us"), EU("eu"), KR("kr"), TW("tw");
+    US("us"), EU("eu"), KR("kr"), TW("tw"), CN("cn");
 
     private String description;
 
